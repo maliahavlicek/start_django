@@ -5,3 +5,8 @@ from django.shortcuts import render, HttpResponse
 
 def hello(request):
     return HttpResponse('Hello!')
+
+
+def index(request):
+    """Return the index.html file"""
+    return render(request, 'index.html')

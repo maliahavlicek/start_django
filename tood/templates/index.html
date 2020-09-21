@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_heading %}
+    <div class="center">
+        Bring the next level of competition to your group.
+    </div>
+{% endblock %}
+{% block main_content %}
+    <div class="container-fluid rocket">
+        <div class="main-item">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        This is a page. Index.html
+                    </p>
+                    <p>
+                        We offer a tiered set of products from a basic Free Package to a Deluxe Suite of Features with
+                        Pricing for Life.
+                    </p>
+                    <div>
+                        <a href="{% url 'hello' %}" class="btn btn-primary">Say Hello</a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

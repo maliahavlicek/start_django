@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +27,7 @@ SECRET_KEY = '#)fx(5yh&gmn1dbtp(-nulz_+!7(^tq2lk)cg0q(zrade)qt(&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', '0.0.0.0', '.gitpod', '8080-c743da8b-304d-47a7-963e-7836ab10d9e2.ws-us02.gitpod.io']
+ALLOWED_HOSTS = ['localhost', '.herokuapp.com', '127.0.0.1', '0.0.0.0', '.gitpod', '8080-c743da8b-304d-47a7-963e-7836ab10d9e2.ws-us02.gitpod.io']
 
 
 # Application definition
@@ -55,7 +57,7 @@ ROOT_URLCONF = 'django_todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,4 +120,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+STATICFILES_LOCATION = 'static'
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
