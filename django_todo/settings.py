@@ -25,7 +25,7 @@ SECRET_KEY = '#)fx(5yh&gmn1dbtp(-nulz_+!7(^tq2lk)cg0q(zrade)qt(&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', '0.0.0.0', '.gitpod', '8080-c743da8b-304d-47a7-963e-7836ab10d9e2.ws-us02.gitpod.io']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tood',
 ]
 
 MIDDLEWARE = [
